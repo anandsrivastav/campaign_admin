@@ -1,9 +1,9 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.14.1"
 
-set :application, "admin"
-set :repo_url, "git@github.com:manish-oak/linkedin-backend.git" 
-set :branch, :development
+set :application, "campaign"
+set :repo_url, "git@github.com:anandsrivastav/campaign_admin.git" 
+set :branch, :master
 set :stage, :production
 set :deploy_to, "/home/deploy/campaign"
 set :linked_files, %w{config/database.yml config/master.key}
@@ -33,4 +33,4 @@ namespace :deploy do
   end
 end
 
-after "deploy:publishing", "deploy:seed"
+#after "deploy:publishing", "deploy:seed"
